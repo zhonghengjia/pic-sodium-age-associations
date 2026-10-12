@@ -1,0 +1,9 @@
+{
+  "M":50,"iterations":30,"donors":5,"seed":20261009,
+  "sodium_knots":[129.0,135.0,142.0],
+  "age_log_knots":[0.6381996853236792,5.347094248001388,7.976085281764024],
+  "knots_role":"Inherited fixed auxiliary expression only; no new outcome fitting",
+  "clinical_labs":["albumin","creatinine","urea","lactate","glucose","ph","hb","wbc","platelet","chloride_D1","chloride_D2","chloride_D3"],
+  "excluded_from_MI":["INR","LOS","K_source5226","alt","bilirubin","pco2","perioperative"],
+  "K_source5226":"Clean complete conditional-source data retained in master; specimen conflict not resolved or imputed"
+}

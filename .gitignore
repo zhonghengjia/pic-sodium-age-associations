@@ -1,0 +1,26 @@
+# Code-only repository: all study inputs and generated results are excluded.
+**/data/
+**/restricted*/
+**/source_data/
+**/results/
+**/output/
+**/figures/
+**/source/
+**/reviews/
+**/supervision/
+*.csv
+*.tsv
+*.rds
+*.RData
+*.rda
+*.parquet
+*.feather
+*.pdf
+*.png
+*.docx
+*.xlsx
+*.zip
+*.log
+.env
+__pycache__/
+audit/

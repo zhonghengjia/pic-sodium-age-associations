@@ -1,0 +1,9 @@
+# Input schema and de-identification
+
+`observed_input_columns.json` lists column names only; it contains no records. The principal input is one row per child eligible at the 72-hour landmark, with an arbitrary local row key `id`, age in days, descriptive age layer L01–L05, sex F/M, first ICU category, D1/D2/D3 arithmetic daily mean sodium, nD1/nD2/nD3 measurement counts, reconstructed observation counts and subsequent in-hospital death (0/1). Clinical lab variables are defined by the fixed MI configuration. BUN is derived per imputation as 2.8 × urea in mmol/L.
+
+Age/ICU labels and variable units must match the manuscript and source definitions. Absolute patient-shifted timestamps do not establish UTC time. Daily windows are elapsed time from first ICU entry. The accepted cleaning/adjudication process, including two deterministic sodium reconstructions, precedes these consumers and is not reconstructed from this public archive.
+
+KM inputs require `fup_days`, `death`, `sodium_group` (Low/Normal/High) and `age_layer`; use complete subsequent hospital follow-up, with live discharge censored. AJ inputs require `time_days`, `event` (Censored/Death/Discharged alive), `sodium_status` and `age_layer`. The original local row key must never be published. Plotting inputs comprise saved aggregate estimates, group summaries, ROC coordinates and conditional intervals; these are not included.
+
+Keep licensed inputs and every derived individual-level file in an access-controlled local workspace outside the Git checkout. Remove names, hospital/patient identifiers, free text, exact dates, locations and linkage keys from material considered for sharing. Replacing an identifier alone does not establish that a row-level dataset is safe or authorized to disclose. This repository grants no permission to redistribute PIC data.
